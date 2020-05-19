@@ -116,7 +116,7 @@ request.send();
 
 //get current weather data from open weather api
 var requestTwo = new XMLHttpRequest();
-requestTwo.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=draper,utah&appid=2225780abf3f8f7be7e1a3aa2a2a18df&units=imperial');
+requestTwo.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=draper,utah&appid=2225780abf3f8f7be7e1a3aa2a2a18df&units=imperial');
 requestTwo.onload = function() {
     var response = requestTwo.response;
     var parsedData = JSON.parse(response);
@@ -133,7 +133,7 @@ requestTwo.send();
 
 //get 3 day forecast from Accuweather (Open Weather's Free API key did not allow for proper forecasting)
 var requestThree = new XMLHttpRequest();
-requestThree.open('GET', 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/2195948?apikey=4dHHaMusAwfapKUomGmtgbuuNKgOgN5e');
+requestThree.open('GET', 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/2195948?apikey=4dHHaMusAwfapKUomGmtgbuuNKgOgN5e');
 requestThree.onload = function() {
     var response = requestThree.response;
     var parsedData = JSON.parse(response);
