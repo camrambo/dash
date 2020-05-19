@@ -1,0 +1,684 @@
+/* HTML Boilerplate Styles */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ################### Custom Styles ################### */
+
+/* AVAILABLE FONTS */
+/*
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Cabin', sans-serif;
+font-family: 'Encode Sans', sans-serif;
+font-family: 'Federo', sans-serif;
+font-family: 'Alata', sans-serif;
+*/
+
+* {
+  font-family: 'Encode Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.appHeader {
+  min-width: 100%;
+  height: 75px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+.headingSide {
+  background: #346497;
+  width: 20%;
+  height: 100%;
+  display: flex;
+}
+
+.headingMain {
+  height: 100%;
+  background: #17508b;
+  width: 80%;
+}
+
+.logoBox {
+  height: 100%;
+  width: 80%;
+  display: flex;
+}
+
+.logoBox img {
+  height: 60%;
+  align-self: center;
+  padding-left: 15px;
+}
+
+.appMain {
+  width: 100%;
+  display: flex;
+  margin-top: 75px;
+}
+
+.appSidebar {
+  width: 20%;
+  background: #222222;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  color: white;
+  transition: 0.5s;
+}
+
+.appBody {
+  width: 100%;
+  margin-left: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f1f4f6;
+  height: 100%;
+  transition: 0.5s;
+  padding: 10px 25px;
+  min-height: calc(100vh - 80px);
+}
+
+.mainNode {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dashNode {
+  width: 33%;
+  margin: 0 auto;
+}
+
+.dashNavBtn:hover {
+  cursor: pointer;
+}
+
+.halfNode {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.dashNode.dn1 {
+  width: 35%;
+}
+
+.dashNode.dn2 {
+  width: 65%;
+}
+
+.dashNode.dnWide {
+  width: 100%;
+}
+
+.nodeBox {
+  text-align: center;
+  margin: 20px;
+  border-radius: 5px;
+  position: relative;
+  padding: 15px;
+  background: white;
+  -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(0, 0, 0, 0.03), 0 0.9375rem 1.40625rem rgba(0, 0, 0, 0.03), 0 0.25rem 0.53125rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0.46875rem 2.1875rem rgba(0, 0, 0, 0.03), 0 0.9375rem 1.40625rem rgba(0, 0, 0, 0.03), 0 0.25rem 0.53125rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.03);
+}
+
+.dn1 .nodeBox,
+.dn2 .nodeBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainNode .nodeBox {
+  background: white;
+}
+
+.halfNode .nodeBox {
+  background: white;
+}
+
+.nodeBox img {
+  max-width: 100%;
+}
+
+.nodeWrapper {
+  display: flex;
+}
+
+.nodeWrapper .nodeBox {
+  min-height: 85%;
+  margin-bottom: 45px;
+}
+
+.graphWrap {
+  max-width: 50%;
+  position: relative;
+  display: flex;
+}
+
+.d2 .nodeBox, 
+.dn1 .nodeBox {
+  max-height: 400px;
+}
+
+.profilePic {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.profilePic img {
+  border-radius: 50%;
+}
+
+.menuList {
+  list-style: none;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuList li {
+  font-size: 25px;
+  display: flex;
+}
+
+.menuList a {
+  font-size: 25px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.menuList ion-icon {
+  font-size: 40px;
+  margin-right: 15px;
+}
+
+.appSidebar li {
+  margin: 25px 0;
+}
+
+.appSidebar h3 {
+  margin: 0;
+  font-weight: 100;
+  transition: 0.5s;
+  font-size: 17px;
+}
+
+.menuToggle {
+  align-self: center;
+}
+
+.xToggle {
+  background: none;
+  color: white;
+  font-size: 50px;
+  border: none;
+  outline: none;
+}
+
+.appSidebar.shrink li {
+  margin: 25px 0;
+}
+
+.appSidebar.shrink {
+  width: 70px;
+}
+
+.appSidebar.shrink h3 {
+  /* display: none; */
+  font-size: 0;
+  transition: 0.5s;
+}
+
+.appBody.shrink {
+  margin-left: 70px;
+}
+
+.userHeading {
+  float: right;
+  height: 100%;
+  display: flex;
+  margin-right: 3%;
+  align-items: center;
+}
+
+.userHeading img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.userHeading h5 {
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: 100;
+  font-size: 15px;
+  margin: 0;
+}
+
+.newsCard {
+  background: #346497;
+  margin: 15px 20px;
+  border-radius: 5px;
+  padding: 0px 30px;
+}
+
+.cardTitle {
+  color: white;
+  font-weight: 100;
+}
+
+.cardBody {
+  padding: 5px 0;
+}
+
+.cardText {
+  padding-bottom: 25px;
+}
+
+.tempBox {
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tempBox i {
+  font-size: 60px;
+  padding: 15px;
+}
+
+.dayName {
+  font-size: 22px;
+}
+
+.tempForecasts {
+  font-size: 20px;
+}
+
+.tempLabel {
+  font-style: italic;
+}
+
+.cityBox {
+  font-size: 45px;
+}
+
+.typeBox {
+  font-size: 28px;
+}
+
+.forecastBox {
+  display: flex;
+  justify-content: center;
+}
+
+.fc {
+  margin: 20px;
+  border: solid 1px;
+  padding: 15px 10px;
+}
+
+#myChart {
+  width: 100% !important;
+  background: #fff;
+}
+
+/* Loading Animation */
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  top: 25%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.lds-spinner h3 {
+  margin-top: 90px;
+}
+
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #000;
+}
+
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* End Loading Animation */
+
+.teamContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.titles, .teamMember {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titles {
+  font-weight: bold;
+}
+
+.userID, 
+.idNum,
+.userEXT,
+.employeeExt {
+  padding: 5px 25px;
+  flex-basis: 5%;
+}
+
+.userNAME,
+.employeeName {
+  padding: 5px 25px;
+  flex-basis: 15%;
+  text-align: left;
+}
+
+.userPOS, 
+.employeePos, 
+.userDEP, 
+.employeeDep {
+  padding: 5px 25px;
+  flex-basis: 18%;
+}
+
+.teamMember.dark {
+  background: #efefef;
+}
+
+.teamMember {
+  padding: 5px 0;
+}
+
+.teamMember:hover {
+  background: #346497;
+  transition: .3s;
+  color: white;
+}
+
+.userPIC img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.userPIC {
+  position: relative;
+  flex-basis: 3%;
+}
+
+.ePic img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+.employeePic {
+  flex-basis: 3%;
+}
+
+.ePic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eInfoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 0;
+}
+
+.eName {
+  font-size: 28px;
+}
+
+.ePos {
+  font-size: 18px;
+}
+
+.eExt {
+  font-size: 25px;
+}
+
+.settingsPage {
+  display: none;
+  width: 70%;
+  margin: 45px 0;
+}
+
+.settingsPage .nodeBox {
+  width: 90%;
+  margin: 0 auto;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.textContainer button {
+  margin: 25px;
+  padding: 20px;
+}
+
+.mobileNotice {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+  background: white;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+
+.mn-contain {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 20%;
+  text-align: center;
+  border: solid;
+  padding: 15px;
+}
+
+@media screen and (max-width: 1100px) {
+  .mobileNotice {
+    display: block;
+  }
+  .appHeader {
+    display: none;
+  }
+  .appMain {
+    display: none;
+  }
+}

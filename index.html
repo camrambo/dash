@@ -1,0 +1,263 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/weather-icons.css">
+  <meta name="theme-color" content="#fafafa">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Alata|Cabin|Encode+Sans|Federo|Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="mobileNotice">
+    <div class="mn-contain">
+      <h2>This dashboard was designed and optimized to be viewed from a desktop computer. We apologize for this inconvenience.</h2>
+    </div>
+  </div>
+  <div class="appHeader">
+    <div class="headingSide">
+      <div class="logoBox">
+        <img src="/img/fullwhite.png">
+        <!-- <img src="https://freedomvillages.co.nz/wp-content/uploads/2016/11/placeholder-logo-300x150.png"> -->
+      </div>
+      <div class="menuToggle">
+        <button class="xToggle"><ion-icon name="menu-outline"></ion-icon></button>
+      </div>
+    </div>
+    <div class="headingMain">
+      <div class="userHeading">
+        <h5>John Doe<br>Sales Consultant</h5>
+        <img src="https://tricityescaperooms.com/wp-content/uploads/2018/01/person-placeholder-male-5.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="appMain">
+    <div class="appSidebar">
+      <ul class="menuList">
+        <li><a class="dashNavBtn mainDash" ><ion-icon name="star-outline" title="My Dashboard"></ion-icon><h3>My Dashboard</h3></a></li>
+        <li><a class="dashNavBtn prodDash" ><ion-icon name="podium-outline" title="Productivity"></ion-icon><h3>Productivity</h3></a></li>
+        <li><a class="dashNavBtn teamDash" ><ion-icon name="people-outline" title="Our Team"></ion-icon><h3>Our Team</h3></a></li>
+        <li><a class="dashNavBtn financeDash" ><ion-icon name="cash-outline" title="Finances"></ion-icon><h3>Finance News</h3></a></li>
+        <li><a class="dashNavBtn settingsDash" ><ion-icon name="settings-outline" title="Settings"></ion-icon><h3>Settings</h3></a></li>
+      </ul>
+    </div>
+    <div class="appBody">
+      <div class="nodeWrapper">
+        <div class="dashNode dn1">
+          <div class="nodeBox">
+            <div class="profilePic">
+              <img src="https://tricityescaperooms.com/wp-content/uploads/2018/01/person-placeholder-male-5.jpg" alt="">
+            </div>
+            <div class="welcome">
+              <h2>Welcome back, friend!</h2>
+              <p>Name: John Doe</p>
+              <p>Department: Sales</p>
+              <p>Ext: 555</p>
+            </div>
+          </div>
+        </div>
+        <div class="dashNode dn2">
+          <div class="nodeBox">
+            <h2>My Stats</h2>
+            <div class="graphWrap">
+              <canvas id="myChart2" width="400" height="400"></canvas>
+              <canvas id="myChart3" width="400" height="400"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- stock market trend graph -->
+      <div class="mainNode dn0">
+        <div class="nodeBox">
+          <h2>Stock Market Trends</h2>
+          <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <h3>Loading...</h3>
+          </div>
+          <canvas id="myChart" width="1000" height="400"></canvas>
+        </div>
+      </div>
+      <div class="dashNode dn4">
+        <div class="nodeBox">
+          <div class="textBox">
+            <h2>Team Stats</h2>
+          </div>
+          <canvas id="myChart5" width="400" height="250"></canvas>
+        </div>
+      </div>
+      <div class="dashNode dn5">
+        <div class="nodeBox">
+          <div class="textBox">
+            <h2>Weekly Sales</h2>
+          </div>
+          <canvas id="myChart4" width="400" height="250"></canvas>
+        </div>
+      </div>
+      <div class="dashNode dn6">
+        <div class="nodeBox">
+          <div class="textBox">
+            <h2>Company Stats</h2>
+          </div>
+          <canvas id="myChart6" width="400" height="250"></canvas>
+        </div>
+      </div>
+      <div class="dashNode dnWide">
+        <div class="nodeBox">
+          <h2>Our Team</h2>
+          <div class="teamContainer">
+            <div class="titles">
+              <div class="idNum">ID #</div>
+              <div class="employeePic"></div>
+              <div class="employeeName">Name</div>
+              <div class="employeeExt">Extension</div>
+              <div class="employeePos">Position</div>
+              <div class="employeeDep">Department</div>
+            </div>
+            <a href="#ex1" rel="modal:open" class="empModal">
+              <div class="teamMember dark">
+                <div class="userID">123</div>
+                <div class="userPIC"><img src="https://tricityescaperooms.com/wp-content/uploads/2018/01/person-placeholder-male-5.jpg" alt=""></div>
+                <div class="userNAME">Bob Johnson</div>
+                <div class="userEXT">x555</div>
+                <div class="userPOS">Sales Consultant</div>
+                <div class="userDEP">Sales</div>
+              </div>
+            </a>
+            <a href="#ex1" rel="modal:open" class="empModal">
+              <div class="teamMember">
+                <div class="userID">421</div>
+                <div class="userPIC"><img src="https://www.hopkinsusfhp.org/wp-content/uploads/2018/02/person-placeholder-300x275.jpg" alt=""></div>
+                <div class="userNAME">Karen Wilson</div>
+                <div class="userEXT">x555</div>
+                <div class="userPOS">Account Manager</div>
+                <div class="userDEP">Retention</div>
+              </div>
+            </a>
+            <a href="#ex1" rel="modal:open" class="empModal">
+              <div class="teamMember dark">
+                <div class="userID">88</div>
+                <div class="userPIC"><img src="https://tricityescaperooms.com/wp-content/uploads/2018/01/person-placeholder-male-5.jpg" alt=""></div>
+                <div class="userNAME">Mike Hansen</div>
+                <div class="userEXT">x555</div>
+                <div class="userPOS">Sales Manager</div>
+                <div class="userDEP">Sales</div>
+              </div>
+            </a>
+            <a href="#ex1" rel="modal:open" class="empModal">
+              <div class="teamMember">
+                <div class="userID">105</div>
+                <div class="userPIC"><img src="https://tricityescaperooms.com/wp-content/uploads/2018/01/person-placeholder-male-5.jpg" alt=""></div>
+                <div class="userNAME">Ken Jones</div>
+                <div class="userEXT">x555</div>
+                <div class="userPOS">Sales Consultant</div>
+                <div class="userDEP">Sales</div>
+              </div>
+            </a>
+            <a href="#ex1" rel="modal:open" class="empModal">
+              <div class="teamMember dark">
+                <div class="userID">93</div>
+                <div class="userPIC"><img src="https://www.hopkinsusfhp.org/wp-content/uploads/2018/02/person-placeholder-300x275.jpg" alt=""></div>
+                <div class="userNAME">Mary Brown</div>
+                <div class="userEXT">x555</div>
+                <div class="userPOS">Account Manager</div>
+                <div class="userDEP">Retention</div>
+              </div>
+            </a>
+            <a href="#ex1" rel="modal:open" class="empModal">
+              <div class="teamMember">
+                <div class="userID">234</div>
+                <div class="userPIC"><img src="https://www.hopkinsusfhp.org/wp-content/uploads/2018/02/person-placeholder-300x275.jpg" alt=""></div>
+                <div class="userNAME">Jane Davidson</div>
+                <div class="userEXT">x555</div>
+                <div class="userPOS">Appointment Setter</div>
+                <div class="userDEP">Sales</div>
+              </div>
+            </a>
+            <a href="#ex1" rel="modal:open" class="empModal">
+              <div class="teamMember dark">
+                <div class="userID">114</div>
+                <div class="userPIC"><img src="https://tricityescaperooms.com/wp-content/uploads/2018/01/person-placeholder-male-5.jpg" alt=""></div>
+                <div class="userNAME">Rick Jackson</div>
+                <div class="userEXT">x555</div>
+                <div class="userPOS">Sales Consultant</div>
+                <div class="userDEP">Sales</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- weather forecast box -->
+      <div class="halfNode dn7">
+        <div class="nodeBox">
+          <div class="weatherBox"></div>
+          <div class="forecastBox">
+            <div class="fc fcOne"></div>
+            <div class="fc fcTwo"></div>
+            <div class="fc fcThree"></div>
+          </div>
+        </div>
+      </div>
+    <!-- news box -->
+      <div class="halfNode dn8">
+        <div class="nodeBox">
+          <h2>Top Financal News</h2>
+          <div class="newsBox"></div>
+        </div>
+      </div>
+      <!-- settings box -->
+      <div class="settingsPage">
+        <div class="nodeBox">
+          <div class="textContainer">
+            <h2>Select Theme Color:</h2>
+            <button class="defaultTheme">Default Theme (Black & Blue)</button>
+            <button class="secondaryTheme">Secondary Theme (orange & magenta)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div id="ex1" class="modal">
+    <div class="ePic"></div>
+    <div class="eInfoBox">
+      <div class="eName"></div>
+      <div class="ePos"></div>
+      <div class="eExt"></div>
+    </div>
+  </div>
+  <!-- END MODAL -->
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script async src="js/charts.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+</body>
+
+</html>
