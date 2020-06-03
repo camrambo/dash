@@ -96,7 +96,7 @@ $('.secondaryTheme').click(function() {
 
 //grab top news stories from news api
 var request = new XMLHttpRequest();
-request.open('GET', "https://newsapi.org/v2/everything?q=finance&apiKey=ad859ed14dca47bc880b7dad49a524f4");
+request.open('GET', "https://newsapi.org/v2/everything?q=finance&apiKey=4cdbd8df4f82414c9985bdbd36724451");
 request.onload = function() {
 	var response = request.response;
 	var parsedDataFour = JSON.parse(response);
@@ -116,7 +116,7 @@ request.send();
 
 //get current weather data from open weather api
 var requestTwo = new XMLHttpRequest();
-requestTwo.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=draper,utah&appid=2225780abf3f8f7be7e1a3aa2a2a18df&units=imperial');
+requestTwo.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=draper,utah&appid=88049e9fbd71684e2371cb55502349e3&units=imperial');
 requestTwo.onload = function() {
     var response = requestTwo.response;
     var parsedData = JSON.parse(response);
@@ -133,7 +133,7 @@ requestTwo.send();
 
 //get 3 day forecast from Accuweather (Open Weather's Free API key did not allow for proper forecasting)
 var requestThree = new XMLHttpRequest();
-requestThree.open('GET', 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/2195948?apikey=4dHHaMusAwfapKUomGmtgbuuNKgOgN5e');
+requestThree.open('GET', 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/2195948?apikey=Kp5RXPKo6ihAsy7vMmGN7I1l7gXJjLUa');
 requestThree.onload = function() {
     var response = requestThree.response;
     var parsedData = JSON.parse(response);
