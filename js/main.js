@@ -94,23 +94,28 @@ $('.secondaryTheme').click(function() {
 });
 
 
-//grab top financial news stories
-var data = null;
-
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-    if (this.readyState === this.DONE) {
-        console.log(this.responseText);
+//grab top news stories from news api
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://bloomberg-market-and-financial-news.p.rapidapi.com/stories/list?template=CURRENCY&id=usdjpy",
+    "method": "GET",
+    "headers": {
+        "x-rapidapi-host": "bloomberg-market-and-financial-news.p.rapidapi.com",
+        "x-rapidapi-key": "20a7b8dd31msh6fc07efc4888c70p1c97adjsn89be696b126f"
     }
+}
+
+$.ajax(settings).done(function (response) {
+    //Grab 3 stories
+    for (var i = 0; i < 3; i++) {
+        var NewsTitles = response.stories[i].title;
+        var NewsLinks = response.stories[i].longURL;
+        // var NewsDescription = parsedDataFour.articles[i].description;
+        // $('.newsBox').append('<a href="' + NewsLinks + '" target="_blank"><div class="newsCard"><div class="cardBody"><h4 class="cardTitle">' + NewsTitles + '</h4></div><div class="cardText">' + NewsDescription + '</div></div></a>');
+        $('.newsBox').append('<a href="' + NewsLinks + '" target="_blank"><div class="newsCard"><div class="cardBody"><h4 class="cardTitle">' + NewsTitles + '</h4></div></div></a>');
+    };
 });
-
-xhr.open("GET", "https://bloomberg-market-and-financial-news.p.rapidapi.com/stories/list?template=CURRENCY&id=usdjpy");
-xhr.setRequestHeader("x-rapidapi-host", "bloomberg-market-and-financial-news.p.rapidapi.com");
-xhr.setRequestHeader("x-rapidapi-key", "20a7b8dd31msh6fc07efc4888c70p1c97adjsn89be696b126f");
-
-xhr.send(data);
 
 
 
