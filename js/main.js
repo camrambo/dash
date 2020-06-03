@@ -95,22 +95,20 @@ $('.secondaryTheme').click(function() {
 
 
 //grab top news stories from news api
-var data = null;
-
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-    if (this.readyState === this.DONE) {
-        console.log(this.responseText);
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://microsoft-azure-bing-news-search-v1.p.rapidapi.com/?Category=Finance",
+    "method": "GET",
+    "headers": {
+        "x-rapidapi-host": "microsoft-azure-bing-news-search-v1.p.rapidapi.com",
+        "x-rapidapi-key": "20a7b8dd31msh6fc07efc4888c70p1c97adjsn89be696b126f"
     }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
 });
-
-xhr.open("GET", "https://microsoft-azure-bing-news-search-v1.p.rapidapi.com/?Category=Finance");
-xhr.setRequestHeader("x-rapidapi-host", "microsoft-azure-bing-news-search-v1.p.rapidapi.com");
-xhr.setRequestHeader("x-rapidapi-key", "20a7b8dd31msh6fc07efc4888c70p1c97adjsn89be696b126f");
-
-xhr.send(data);
 
 
 //get current weather data from open weather api
@@ -167,7 +165,7 @@ requestThree.onload = function() {
 
 };
 requestThree.send();
- 
+
 
 //customize modal for each employee
 $('.empModal').click(function() {
