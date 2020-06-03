@@ -79,7 +79,7 @@ var settings = {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-		"x-rapidapi-key": "20a7b8dd31msh6fc07efc4888c70p1c97adjsn89be696b126f"
+		"x-rapidapi-key": "e2eb991334mshc50923f46d3d6a7p1c89cfjsnf351c88d1822"
 	}
 }
 
