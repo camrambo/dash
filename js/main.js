@@ -167,7 +167,7 @@ requestThree.onload = function() {
 
 };
 requestThree.send();
-
+ 
 
 //customize modal for each employee
 $('.empModal').click(function() {
