@@ -94,24 +94,7 @@ $('.secondaryTheme').click(function() {
 });
 
 
-//grab top news stories from news api
-var request = new XMLHttpRequest();
-request.open('GET', "https://newsapi.org/v2/everything?q=finance&apiKey=4cdbd8df4f82414c9985bdbd36724451");
-request.onload = function() {
-	var response = request.response;
-	var parsedDataFour = JSON.parse(response);
-	//Grab 3 stories
-	for (var i = 0; i < 3; i++) {
-		var NewsTitles = parsedDataFour.articles[i].title;
-		var NewsLinks = parsedDataFour.articles[i].url;
-        // var NewsDescription = parsedDataFour.articles[i].description;
-        // $('.newsBox').append('<a href="' + NewsLinks + '" target="_blank"><div class="newsCard"><div class="cardBody"><h4 class="cardTitle">' + NewsTitles + '</h4></div><div class="cardText">' + NewsDescription + '</div></div></a>');
-        $('.newsBox').append('<a href="' + NewsLinks + '" target="_blank"><div class="newsCard"><div class="cardBody"><h4 class="cardTitle">' + NewsTitles + '</h4></div></div></a>');
-	};
 
-
-};
-request.send();
 
 
 //get current weather data from open weather api
