@@ -433,22 +433,27 @@ a {
 
 .dayName {
   font-size: 22px;
+  font-family: 'Jost', sans-serif;
 }
 
 .tempForecasts {
   font-size: 20px;
+  font-family: 'Jost', sans-serif;
 }
 
 .tempLabel {
   font-style: italic;
+  font-family: 'Jost', sans-serif;
 }
 
 .cityBox {
   font-size: 45px;
+  font-family: 'Jost', sans-serif;
 }
 
 .typeBox {
   font-size: 28px;
+  font-family: 'Jost', sans-serif;
 }
 
 .forecastBox {
@@ -457,10 +462,15 @@ a {
 }
 
 .fc {
-  margin: 20px;
-  border: solid 1px;
-  padding: 15px 10px;
+    margin: 20px;
+    border: solid 1px;
+    padding: 15px 20px;
+    background: #212121;
+    border-radius: 5px;
+    color: white;
 }
+
+
 
 #myChart {
   width: 100% !important;
