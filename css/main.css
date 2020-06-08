@@ -365,7 +365,7 @@ a {
 }
 
 .newsCard {
-  background: #346497;
+  background: #346497ab;
   margin: 15px 20px;
   border-radius: 5px;
   padding: 0px 30px;
@@ -374,6 +374,8 @@ a {
 .cardTitle {
   color: white;
   font-weight: 100;
+  font-size: 20px;
+  margin: 2%;
 }
 
 .cardBody {
