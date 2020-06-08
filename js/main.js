@@ -18,6 +18,7 @@ $('.mainDash').click(function() {
     $('.dnWide').show();
     $('.dn7').show();
     $('.dn8').show();
+    $('.nodeWrapper').show();
     $('.settingsPage').hide();
 });
 //Finance
@@ -32,6 +33,7 @@ $('.financeDash').click(function() {
     $('.dnWide').hide();
     $('.dn7').show();
     $('.dn8').show();
+    $('.nodeWrapper').hide();
     $('.settingsPage').hide();
 });
 //Productivity
@@ -46,6 +48,7 @@ $('.prodDash').click(function() {
     $('.dnWide').hide();
     $('.dn7').hide();
     $('.dn8').hide();
+    $('.nodeWrapper').show();
     $('.settingsPage').hide();
 });
 //Our Team
@@ -60,6 +63,7 @@ $('.teamDash').click(function() {
     $('.dnWide').show();
     $('.dn7').hide();
     $('.dn8').hide();
+    $('.nodeWrapper').show();
     $('.settingsPage').hide();
 });
 //Settings
@@ -74,6 +78,7 @@ $('.settingsDash').click(function() {
     $('.dnWide').hide();
     $('.dn7').hide();
     $('.dn8').hide();
+    $('.nodeWrapper').hide();
     $('.settingsPage').show();
 });
 //Settings - Change between themes depending on selected button
