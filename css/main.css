@@ -546,6 +546,7 @@ a {
 .titles, .teamMember {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .titles {
