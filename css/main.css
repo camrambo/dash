@@ -223,6 +223,10 @@ a {
     padding: 0;
 }
 
+#ex2 h2 {
+  text-align: center; 
+}
+
 .halfNode {
   width: 50%;
   margin: 0 auto;
