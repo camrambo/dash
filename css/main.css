@@ -100,14 +100,22 @@ textarea {
 /* AVAILABLE FONTS */
 /*
 font-family: 'Josefin Sans', sans-serif;
+
 font-family: 'Cabin', sans-serif;
 font-family: 'Encode Sans', sans-serif;
 font-family: 'Federo', sans-serif;
 font-family: 'Alata', sans-serif;
+
+font-family: 'Inder', sans-serif;
+font-family: 'Jost', sans-serif;
 */
 
 * {
   font-family: 'Encode Sans', sans-serif;
+}
+ 
+h2 {
+  font-family: 'Jost', sans-serif;  
 }
 
 a {
