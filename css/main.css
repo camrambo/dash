@@ -199,6 +199,23 @@ a {
   cursor: pointer;
 }
 
+.apiInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.apiInfo h4 {
+    margin: 0;
+    font-weight: 100;
+}
+
+.apiInfo ion-icon {
+    margin-right: 15px;
+    font-size: 40px;
+}
+
 .halfNode {
   width: 50%;
   margin: 0 auto;
