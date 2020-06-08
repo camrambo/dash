@@ -118,6 +118,10 @@ h2 {
       font-family: 'Josefin Sans', sans-serif;
 }
 
+h4.cardTitle {
+    font-family: 'Jost', sans-serif;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -393,7 +397,7 @@ a {
 }
 
 .newsCard {
-  background: #2c806dab;
+  background: #212121;
   margin: 15px 20px;
   border-radius: 5px;
   padding: 0px 30px;
