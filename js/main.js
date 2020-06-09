@@ -99,6 +99,19 @@ $('.secondaryTheme').click(function() {
 });
 
 
+//Show Stats Box
+$('.btnStats').click() {
+    $('.graphWrap').show();
+    $('.goalBox').hide();
+}
+
+//Show Goals Box
+$('.btnGoals').click() {
+    $('.goalBox').show();
+    $('.graphWrap').hide();
+}
+
+
 //grab top news stories from news api
 var settings = {
     "async": true,
@@ -112,8 +125,8 @@ var settings = {
 }
 
 $.ajax(settings).done(function (response) {
-    //Grab 3 stories
-    for (var i = 0; i < 3; i++) {
+    //Grab 4 stories
+    for (var i = 0; i < 4; i++) {
         var NewsTitles = response.stories[i].title;
         var NewsLinks = response.stories[i].longURL;
         // var NewsDescription = parsedDataFour.articles[i].description;
