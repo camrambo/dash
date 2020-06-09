@@ -236,7 +236,7 @@ a {
 }
 
 .dashNode.dn1 {
-  width: 50%;
+  width: 60%;
 }
 
 .dashNode.dn2 {
@@ -285,7 +285,7 @@ a {
 .graphWrap {
     position: relative;
     display: none;
-    width: 40%;
+    width: 50%;
 }
 
 .graphWrap.active {
@@ -318,15 +318,17 @@ a {
     margin: 0;
 }
 
-.btnStats, 
-.btnGoals {
+.btnStats, .btnGoals {
     background: #212121;
-    margin: 41px 20px;
+    margin: 41px 12px;
     border-radius: 5px;
-    padding: 0px 15px;
+    padding: 10px 15px;
     color: white;
     border: none;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
 }
 
 .goalBox,
@@ -336,12 +338,13 @@ a {
 
 .announceBox ul {
     list-style: none;
+    padding: 0;
 }
 
 .announceBox li {
-    font-size: 18px;
+    font-size: 15px;
     background: #212121;
-    margin: 10px 40px;
+    margin: 10px 10px;
     border-radius: 5px;
     padding: 15px 30px;
     color: white;
