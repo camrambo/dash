@@ -282,11 +282,6 @@ a {
   width: 100%;
 }
 
-.nodeWrapper .nodeBox {
-  min-height: 89%;
-  margin-bottom: 45px;
-}
-
 .graphWrap {
     position: relative;
     display: flex;
