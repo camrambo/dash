@@ -190,8 +190,7 @@ a {
 }
 
 .mainNode {
-  width: 100%;
-  margin: 0 auto;
+  width: 60%;
 }
 
 .dashNode {
@@ -231,6 +230,11 @@ a {
   margin: 0 auto;
 }
 
+.halfNode.dn8 {
+  width: 40%;
+  margin: unset;
+}
+
 .dashNode.dn1 {
   width: 50%;
 }
@@ -263,7 +267,6 @@ a {
 
 .mainNode .nodeBox {
   background: white;
-  max-height: 500px;
 }
 
 .halfNode .nodeBox {
