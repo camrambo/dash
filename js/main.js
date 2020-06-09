@@ -101,13 +101,13 @@ $('.secondaryTheme').click(function() {
 
 //Show Stats Box
 $('.btnStats').click(function() {
-    $('.graphWrap').toggle(display)
+    $('.graphWrap').toggle()
     $('.goalBox').hide();
 });
 
 //Show Goals Box
 $('.btnGoals').click(function() {
-    $('.goalBox').toggle(display)
+    $('.goalBox').toggle()
     $('.graphWrap').hide();
 });
 
