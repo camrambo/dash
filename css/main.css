@@ -263,6 +263,7 @@ a {
 
 .mainNode .nodeBox {
   background: white;
+  max-height: 500px;
 }
 
 .halfNode .nodeBox {
