@@ -100,11 +100,9 @@ $('.secondaryTheme').click(function() {
 
 
 //Show Stats Box
-$('.btnStats').toggle(function () {
-    $(".graphWrap").addClass("active");
+$('.btnStats').click(function () {
+    $(".graphWrap").toggleClass("active");
     $('.goalBox').hide();
-}, function () {
-    $(".graphWrap").removeClass("active");
 });
 
 
