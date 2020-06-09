@@ -101,7 +101,7 @@ $('.secondaryTheme').click(function() {
 
 //Show Stats Box
 $('.btnStats').click(function() {
-    $('.graphWrap').show();
+    $('.graphWrap').css('display', 'flex');
     $('.goalBox').hide();
 });
 
@@ -125,8 +125,8 @@ var settings = {
 }
 
 $.ajax(settings).done(function (response) {
-    //Grab 4 stories
-    for (var i = 0; i < 4; i++) {
+    //Grab 5 stories
+    for (var i = 0; i < 5; i++) {
         var NewsTitles = response.stories[i].title;
         var NewsLinks = response.stories[i].longURL;
         // var NewsDescription = parsedDataFour.articles[i].description;
