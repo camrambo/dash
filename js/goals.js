@@ -1,96 +1,60 @@
-//check cache
-var cachedList = localStorage.getItem('savedList');
-function checkTheCache() {
-if (cachedList != null) {
-	$('.listContainer').html(cachedList);
-}
-}
-checkTheCache();
+(function() {
 
-var enterButton = document.getElementById("enter");
-var input = document.getElementById("userInput");
-var ul = document.querySelector("ul");
-var item = document.getElementsByTagName("li");
+	var app = {
+		init: function() {
+			// Load list
+			app.storage('get');
 
-function inputLength(){
-	return input.value.length;
-} 
+			// Add task
+			document.querySelector('.app-insert input').addEventListener('keyup', function(e) {
+				if ( e.which === 13 && this.value !== '' ) {
+					app.addTask(this.value);
+					app.storage('update');
+					this.value = '';
+				}
+			}, false);
 
-function listLength(){
-	return item.length;
-}
+			document.querySelector('.app-list').addEventListener('click', function(e) {
+				// Remove task
+				if ( e.target.classList.contains('remove-task') ) {
+					app.removeTask(e.target.parentNode);
 
-function createListElement() {
-	var li = document.createElement("li"); // creates an element "li"
-	li.classList.add("toDoItem");
-	li.appendChild(document.createTextNode(input.value)); //makes text from input field the li text
-	ul.appendChild(li); //adds li to ul
-	input.value = ""; //Reset text input field
+				// Complete Task
+				} else if ( e.target.classList.contains('task') ) {
+					app.completeTask(e.target);
+				}
+			}, false);
+		},
+		addTask: function (task) {
+			var new_task = document.createElement('li');
+				new_task.setAttribute('class', 'task');
+				new_task.innerHTML = task + '<a href="javascript:;" class="remove-task">remove</a>';
+				
+			var $list = document.querySelector('.app-list ul');
+				$list.appendChild(new_task);
+		},
+		removeTask: function (task) {
+			task.style.opacity = 0;
+			setTimeout(function() {
+				task.remove();
+				app.storage('update');
+			}, 400);
+		},
+		completeTask: function (task) {
+			task.classList.toggle('task-complete');
+			app.storage('update');
+		},
+		storage: function(type) {
+			if ( type === 'get' ) {
+				if ( localStorage.getItem('simpletodo') !== null ) {
+					document.querySelector('.app-list').innerHTML = localStorage.getItem('simpletodo');
+				}
+			} else if ( type === 'update' ) {
+				var str = document.querySelector('.app-list').innerHTML;
+				localStorage.setItem('simpletodo', str);
+			}
+		}
+	};
+	app.init();
 
-	//START STRIKETHROUGH
-	function crossOut() {
-		li.classList.toggle("done");
-	}
-	li.addEventListener("click",crossOut);
-	//END STRIKETHROUGH
-
-	// START ADD DELETE BUTTON
-	var dBtn = document.createElement("button");
-	dBtn.appendChild(document.createTextNode(""));
-	dBtn.innerHTML = '<i class="fas fa-times"></i>';
-	li.appendChild(dBtn);
-	dBtn.addEventListener("click", deleteListItem);
-	// END ADD DELETE BUTTON
-
-
-	//ADD CLASS DELETE (DISPLAY: NONE)
-	function deleteListItem(){
-		var deleteNode = $(this).closest('li');
-		deleteNode.addClass("delete");
-		var enteredList = $('.listContainer').html().trim();
-		localStorage.setItem('savedList', enteredList);
-	}
-	//END ADD CLASS DELETE
-}
-
-$('.toDoItem button').on('click', deleteListItem2);
-function deleteListItem2(){
-	var deleteNode = $(this).closest('li');
-	deleteNode.addClass("delete");
-	var enteredList = $('.listContainer').html().trim();
-	localStorage.setItem('savedList', enteredList);
-}
-
-function addListAfterClick(){
-if (inputLength() > 0) { //makes sure that an empty input field doesn't create a li
-	createListElement();
-	var enteredList = $('.listContainer').html().trim();
-	localStorage.setItem('savedList', enteredList);
-}
-
-}
-
-function addListAfterKeypress(event) {
-if (inputLength() > 0 && event.which ===13) { //this now looks to see if you hit "enter"/"return"
-	//the 13 is the enter key's keycode, this could also be display by event.keyCode === 13
-	createListElement();
-	var enteredList = $('.listContainer').html().trim();
-	localStorage.setItem('savedList', enteredList);
-} 
-
-}
-
-enterButton.addEventListener("click",addListAfterClick);
-input.addEventListener("keypress", addListAfterKeypress);
-
-//on button click, show/hide the to-do list
-$('.listHiderBTN').on('click', toggleToDoList);
-function toggleToDoList() {
-	$('.toDoListNode').toggleClass("showThisNode");
-
-	if ($('.toDoListNode').hasClass("showThisNode")) {
-		$('.listHiderBTN').text("Hide To-Do List");
-	} else {
-		$('.listHiderBTN').text("Show To-Do List")
-	}
-};
+})();
