@@ -320,15 +320,17 @@ a {
 }
 
 .btnBox1 {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 25px;
 }
 
 .btnStats, .btnGoals {
     background: #212121;
-    margin: 35px 3px;
+    margin: 7px 3px;
     border-radius: 5px;
-    padding: 10px 15px;
+    padding: 10px 25px;
     color: white;
     border: none;
     cursor: pointer;
