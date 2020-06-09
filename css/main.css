@@ -307,11 +307,23 @@ a {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    width: 45%;
 }
 
 .myInfo p {
     font-size: 21px;
     margin: 0;
+}
+
+.btnStats, 
+.btnGoals {
+    background: #212121;
+    margin: 41px 20px;
+    border-radius: 5px;
+    padding: 0px 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .menuList {
