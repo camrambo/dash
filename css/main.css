@@ -449,9 +449,9 @@ a {
 
 .newsCard {
   background: #212121;
-  margin: 15px 20px;
+  margin: 15px 10px;
   border-radius: 5px;
-  padding: 0px 30px;
+  padding: 0px 5px;
 }
 
 .cardTitle {
