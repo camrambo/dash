@@ -19,13 +19,12 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
-// Add a "checked" symbol when clicking on a list item
-var list = $('.goalBox ul');
-list.click(function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+// Add a strikethrough on click
+$('.goalBox li').click(function() {
+    $(this).toggleClass('checked');
+
+});
+
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
