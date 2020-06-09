@@ -286,7 +286,7 @@ a {
 .graphWrap {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 50%;
 }
 
 .profilePic {
@@ -304,13 +304,14 @@ a {
 
 .myInfo {
     display: flex;
-    width: 50%;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
 .myInfo p {
     font-size: 21px;
+    margin: 0;
 }
 
 .menuList {
