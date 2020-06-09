@@ -100,16 +100,16 @@ $('.secondaryTheme').click(function() {
 
 
 //Show Stats Box
-$('.btnStats').click() {
+$('.btnStats').click(function() {
     $('.graphWrap').show();
     $('.goalBox').hide();
-}
+});
 
 //Show Goals Box
-$('.btnGoals').click() {
+$('.btnGoals').click(function() {
     $('.goalBox').show();
     $('.graphWrap').hide();
-}
+});
 
 
 //grab top news stories from news api
