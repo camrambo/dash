@@ -347,6 +347,7 @@ a {
 .goalBox ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .goalBox ul li {
@@ -390,10 +391,11 @@ a {
 }
 
 .goalBox .close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0px 13px;
+    font-size: 35px;
 }
 
 .goalBox .close:hover {
@@ -402,10 +404,12 @@ a {
 }
 
 .goalBox .header {
-  background-color: #212121;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
+    background-color: #212121;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    margin-top: 40px;
 }
 
 .goalBox .header:after {
@@ -415,26 +419,26 @@ a {
 }
 
 .goalBox input {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 55%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
 }
 
 .goalBox .addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
+    padding: 8px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
 }
 
 .goalBox .addBtn:hover {
