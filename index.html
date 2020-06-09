@@ -69,7 +69,16 @@
               </div>
             </div>
             <div class="goalBox">
+              <div id="myDIV" class="header">
+                <h2>My Goals</h2>
+                <input type="text" id="myInput" placeholder="New Goal...">
+                <span onclick="newElement()" class="addBtn">Add</span>
+              </div>
 
+              <ul id="myUL">
+                <li>Close 3 sales per day for 1 week</li>
+                <li>Zero cancellations for 1 week</li>
+              </ul>
             </div>
             <div class="graphWrap">
               <canvas id="myChart2" width="400" height="400"></canvas>
@@ -295,6 +304,7 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   <script src="js/goals.js"></script>
+  <script src="https://kit.fontawesome.com/a70488ef5a.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 </body>
 
