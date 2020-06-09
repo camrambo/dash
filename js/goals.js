@@ -22,7 +22,6 @@ for (i = 0; i < close.length; i++) {
 // Add a strikethrough on click
 $('.goalBox li').click(function() {
     $(this).toggleClass('checked');
-
 });
 
 
@@ -51,4 +50,9 @@ function newElement() {
       div.style.display = "none";
     }
   }
+  //on new add, rerun list function
+  $('.goalBox li').click(function() {
+      $(this).toggleClass('checked');
+  });
+
 }
