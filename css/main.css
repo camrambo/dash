@@ -303,6 +303,7 @@ a {
 
 .myInfoWrap {
     display: flex;
+    justify-content: space-between;
 }
 
 .myInfo {
@@ -310,7 +311,7 @@ a {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    width: 45%;
+    width: 37%;
 }
 
 .myInfo p {
@@ -320,7 +321,7 @@ a {
 
 .btnStats, .btnGoals {
     background: #212121;
-    margin: 41px 12px;
+    margin: 35px 3px;
     border-radius: 5px;
     padding: 10px 15px;
     color: white;
