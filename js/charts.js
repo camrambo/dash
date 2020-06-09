@@ -146,7 +146,7 @@ $.ajax(settings).done(function (response) {
 
         // Configuration options go here
         options: {
-
+		maintainAspectRatio: false
         }
     });
 });
