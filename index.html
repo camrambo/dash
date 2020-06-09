@@ -69,12 +69,32 @@
               </div>
             </div>
             <div class="goalBox">
-              <ul>
-                <li>Goal #1</li>
-                <li>Goal #2</li>
-                <li>Goal #3</li>
-                <li>Goal #4</li>
-              </ul>
+              <div class="elementNode toDoListNode">
+      <div class="row titleRow">
+        <div class="intro col-12">
+          <h1>To-Do List</h1>
+          <div>
+            <div class="border1"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row secondRow">
+        <div class="col-12">
+          <input id="userInput" type="text" placeholder="New item..." maxlength="22">
+          <button id="enter"><i class="far fa-plus-square"></i></button>
+        </div>
+      </div>
+      <!-- Empty List -->
+      <div class="row thirdRow">
+        <div class="listItems col-12">
+          <ul class="col-12 offset-0 col-sm-8 offset-sm-2 listContainer">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="elementNode btnHideNode">
+      <button class="listHiderBTN">Show To-Do List</button>
+    </div>
             </div>
             <div class="graphWrap">
               <canvas id="myChart2" width="400" height="400"></canvas>
