@@ -330,6 +330,11 @@ a {
     cursor: pointer;
 }
 
+.goalBox,
+.graphWrap {
+  display: none;
+}
+
 .menuList {
   list-style: none;
   padding-left: 15px;
