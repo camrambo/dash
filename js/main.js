@@ -101,8 +101,7 @@ $('.secondaryTheme').click(function() {
 
 //Show Stats Box
 $('.btnStats').click(function() {
-    $('.graphWrap').toggle();
-    $('.graphWrap').css('display', 'flex');
+    $('.graphWrap').toggle().css('display', 'flex');
     $('.goalBox').hide();
 });
 
