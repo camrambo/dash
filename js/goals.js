@@ -23,6 +23,7 @@ for (i = 0; i < close.length; i++) {
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var li = document.createElement("li");
+  li.className = "unchecked";
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
@@ -53,8 +54,10 @@ function newElement() {
 $('.goalBox li').click(function() {
     if ($(this).hasClass('checked')) {
       $(this).removeClass('checked');
+      $(this).addClass('unchecked');
     } 
-    else {
+    else if ($(this).hasClass('unchecked')) {
       $(this).addClass('checked');
+      $(this).removeClass('checked');
     }
 });
