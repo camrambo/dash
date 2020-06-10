@@ -499,6 +499,10 @@ a {
     background: #575757;
 }
 
+.qMark {
+    padding: 10px 0;
+}
+
 .appSidebar h3 {
   margin: 0;
   font-weight: 100;
