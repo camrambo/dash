@@ -219,7 +219,7 @@ var ctx4 = document.getElementById('myChart4').getContext('2d');
                 pointRadius: 8,
                 pointBackgroundColor: 'rgb(255, 255, 255)',
                 pointBorderWidth: 2,
-                data: [6, 9, 5, 7, 4, 5, 8]
+                data: [120, 140, 110, 150, 119, 126, 145]
             }]
         },
 
