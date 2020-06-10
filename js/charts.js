@@ -193,7 +193,7 @@ var myChart3 = new Chart(ctx5, {
                 },
                 ticks: {
                     beginAtZero: true,
-                    max: 50
+                    max: 45
                 },
                 display: false
             }],
