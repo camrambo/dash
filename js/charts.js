@@ -21,7 +21,7 @@ var myChart = new Chart(ctx2, {
     },
     options: {
         title: {
-            display: true,
+            display: false,
             text: '# of Units',
             fontSize: 20
         }
@@ -52,7 +52,7 @@ var myChart3 = new Chart(ctx3, {
     },
     options: {
         title: {
-            display: true,
+            display: false,
             text: 'Total Value',
             fontSize: 20
         },
