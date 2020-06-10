@@ -829,6 +829,10 @@ a {
   flex-basis: 3%;
 }
 
+.userID {
+    width: 33px;
+}
+
 .ePic img {
   width: 70%;
   border-radius: 50%;
