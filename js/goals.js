@@ -23,6 +23,7 @@ for (i = 0; i < close.length; i++) {
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var li = document.createElement("li");
+  li.className = "unchecked";
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
@@ -30,16 +31,7 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
-    // Add a strikethrough on click
-    $('.goalBox li').click(function() {
-        if ($(this).hasClass('checked')) {
-          $(this).removeClass('checked');
-        }
-        else {
-          $(this).addClass('checked');
-        }
-        
-    });
+
   }
   document.getElementById("myInput").value = "";
 
@@ -49,8 +41,6 @@ function newElement() {
   span.appendChild(txt);
   li.appendChild(span);
 
-
-
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
@@ -58,4 +48,6 @@ function newElement() {
     }
   }
 }
+
+
 
