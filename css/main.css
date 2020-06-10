@@ -446,6 +446,10 @@ a {
   background-color: #bbb;
 }
 
+.statsHR {
+  display: none;
+}
+
 .graphWrap {
   display: none;
 }
