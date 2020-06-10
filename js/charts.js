@@ -211,7 +211,7 @@ var ctx4 = document.getElementById('myChart4').getContext('2d');
 
         // The data for our dataset
         data: {
-            labels: ['', '', '', '', '', '', ''],
+            labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
             datasets: [{
                 label: '',
                 borderColor: 'rgb(28, 147, 136)',
