@@ -185,15 +185,15 @@ var myChart3 = new Chart(ctx5, {
                 gridLines: {
                     color: "rgba(0, 0, 0, 0)",
                 },
-                ticks: {
-                    suggestedMin: 0,
-                    max: 50
-                },
                 display: false
             }],
             xAxes: [{
                 gridLines: {
                     color: "rgba(0, 0, 0, 0)",
+                },
+                ticks: {
+                    beginAtZero: true,
+                    max: 50
                 },
                 display: false
             }],
