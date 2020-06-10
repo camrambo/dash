@@ -31,6 +31,9 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
+    $('.goalBox li').on('click', function() {
+        $(this).toggleClass('checked');
+    });
   }
   document.getElementById("myInput").value = "";
 
@@ -47,5 +50,10 @@ function newElement() {
     }
   }
 }
+
+//toggle strikethrough
+$('.goalBox').on('click', '.unchecked', function() {
+    $(this).toggleClass('checked');
+});
 
 
