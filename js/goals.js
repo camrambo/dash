@@ -50,9 +50,17 @@ function newElement() {
       div.style.display = "none";
     }
   }
-  //on new add, rerun list function
+  //on new add, rerun list strikethrough function
   $('.goalBox li').click(function() {
       $(this).toggleClass('checked');
   });
-
 }
+
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    $('.addBtn').click();
+  }
+});
