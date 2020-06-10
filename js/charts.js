@@ -7,9 +7,9 @@ var myChart = new Chart(ctx2, {
         datasets: [{
             data: [12, 7, 2],
             backgroundColor: [
-                'rgb(30, 128, 5, 0.4)',
-                'rgb(52, 100, 151, 0.4)',
-                'rgb(145, 0, 0, 0.4)'
+                'rgb(30, 128, 5, 0.6)',
+                'rgb(52, 100, 151, 0.6)',
+                'rgb(145, 0, 0, 0.6)'
             ],
             borderColor: [
                 'rgb(30, 128, 5)',
@@ -38,9 +38,9 @@ var myChart3 = new Chart(ctx3, {
         datasets: [{
             data: [12000, 3500, 2000],
             backgroundColor: [
-                'rgb(30, 128, 5, 0.4)',
-                'rgb(52, 100, 151, 0.4)',
-                'rgb(145, 0, 0, 0.4)'
+                'rgb(30, 128, 5, 0.6)',
+                'rgb(52, 100, 151, 0.6)',
+                'rgb(145, 0, 0, 0.6)'
             ],
             borderColor: [
                 'rgb(30, 128, 5)',
@@ -73,14 +73,14 @@ var myChart3 = new Chart(ctx3, {
 
 //get stock market info last 5 days [WIP2]
 var settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-charts?comparisons=%255EGSPC%252C%255EIXIC&region=US&lang=en&symbol=%255EDJI&interval=1d&range=5d",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-		"x-rapidapi-key": "20a7b8dd31msh6fc07efc4888c70p1c97adjsn89be696b126f"
-	}
+  "async": true,
+  "crossDomain": true,
+  "url": "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-charts?comparisons=%255EGSPC%252C%255EIXIC&region=US&lang=en&symbol=%255EDJI&interval=1d&range=5d",
+  "method": "GET",
+  "headers": {
+    "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+    "x-rapidapi-key": "20a7b8dd31msh6fc07efc4888c70p1c97adjsn89be696b126f"
+  }
 }
 
 $.ajax(settings).done(function (response) {
@@ -160,11 +160,11 @@ var myChart3 = new Chart(ctx5, {
         datasets: [{
             data: [21, 32, 40, 25, 29],
             backgroundColor: [
-                'rgb(105, 29, 98, 0.4)',
-                'rgb(52, 100, 151, 0.4)',
-                'rgb(145, 0, 0, 0.4)',
-                'rgb(30, 128, 5, 0.4)',
-                'rgb(198, 91, 124, 0.4)'
+                'rgb(105, 29, 98, 0.6)',
+                'rgb(52, 100, 151, 0.6)',
+                'rgb(145, 0, 0, 0.6)',
+                'rgb(30, 128, 5, 0.6)',
+                'rgb(198, 91, 124, 0.6)'
             ],
             borderColor: [
                 'rgb(105, 29, 98)',
@@ -262,11 +262,11 @@ var chart = new Chart(ctx6, {
         datasets: [{
             data: [21, 32, 40, 25, 29],
             backgroundColor: [
-                'rgb(198, 91, 124, 0.4)',
-                'rgb(52, 100, 151, 0.4)',
-                'rgb(145, 0, 0, 0.4)',
-                'rgb(30, 128, 5, 0.4)',
-                'rgb(105, 29, 98, 0.4)'
+                'rgb(198, 91, 124, 0.6)',
+                'rgb(52, 100, 151, 0.6)',
+                'rgb(145, 0, 0, 0.6)',
+                'rgb(30, 128, 5, 0.6)',
+                'rgb(105, 29, 98, 0.6)'
             ],
             borderColor: [
                 'rgb(198, 91, 124)',
