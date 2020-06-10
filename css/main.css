@@ -290,6 +290,7 @@ a {
 
 .graphWrap.active {
   display: flex !important;
+  margin-top: 50px;
 }
 
 .profilePic {
