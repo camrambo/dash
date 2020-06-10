@@ -156,9 +156,9 @@ var ctx5 = document.getElementById('myChart5');
 var myChart3 = new Chart(ctx5, {
     type: 'horizontalBar',
     data: {
-        labels: ['Employee #1', 'Employee #2', 'Employee #3', 'Employee #4', 'Employee #5'],
+        labels: ['John Doe', 'Bob Johnson', 'Mike Hansen', 'Ken Jones', 'Rick Jackson'],
         datasets: [{
-            data: [21, 32, 40, 25, 29],
+            data: [25, 32, 40, 25, 29],
             backgroundColor: [
                 'rgb(105, 29, 98, 0.6)',
                 'rgb(52, 100, 151, 0.6)',
