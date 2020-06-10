@@ -44,14 +44,15 @@ function newElement() {
   span.appendChild(txt);
   li.appendChild(span);
 
+  //on new add, rerun list strikethrough function
+  $('.goalBox li').click(function() {
+      $(this).toggleClass('checked');
+  });
+
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
     }
   }
-  //on new add, rerun list strikethrough function
-  $('.goalBox li').click(function() {
-      $(this).toggleClass('checked');
-  });
 }
