@@ -536,10 +536,6 @@ a {
   outline: none;
 }
 
-.appSidebar.shrink li {
-  margin: 25px 0;
-}
-
 .appSidebar.shrink {
   width: 70px;
 }
