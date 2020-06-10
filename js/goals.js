@@ -19,11 +19,6 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
-// Add a strikethrough on click
-$('.goalBox li').click(function() {
-    $(this).toggleClass('checked');
-});
-
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
@@ -35,6 +30,10 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
+    // Add a strikethrough on click
+    $('.goalBox li').click(function() {
+        $(this).toggleClass('checked');
+    });
   }
   document.getElementById("myInput").value = "";
 
