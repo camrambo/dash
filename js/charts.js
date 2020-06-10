@@ -284,6 +284,9 @@ var chart = new Chart(ctx6, {
         legend: {
             display: false
         },
+        tooltips: {
+            enabled: true
+        },
         scales: {
             xAxes: [{
                 gridLines: {
