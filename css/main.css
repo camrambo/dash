@@ -230,17 +230,22 @@ a {
   margin: 0 auto;
 }
 
+.halfNode.dn7 {
+  width: 33%;
+  margin: 0 auto;
+}
+
 .halfNode.dn8 {
   width: 40%;
   margin: unset;
 }
 
 .dashNode.dn1 {
-  width: 60%;
+  width: 33%;
 }
 
 .dashNode.dn2 {
-  width: 40%;
+  width: 33%;
 }
 
 .dashNode.dnWide {
