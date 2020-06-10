@@ -469,10 +469,11 @@ a {
 }
 
 .menuList {
-  list-style: none;
-  padding-left: 0px;
-  display: flex;
-  flex-direction: column;
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    margin: -15px 0 0 0;
 }
 
 .menuList a {
