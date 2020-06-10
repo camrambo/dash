@@ -300,7 +300,8 @@ a {
 
 .profilePic {
     width: 185px;
-    padding: 5px 20px;
+    padding: 5px 10px;
+    max-width: 27%;
 }
 
 .profilePic img {
@@ -321,7 +322,8 @@ a {
 }
 
 .myInfo h2 {
-    font-size: 30px;
+    font-size: 28px;
+    margin: -5px 0;
 }
 
 .myInfo h2 span {
@@ -348,6 +350,7 @@ a {
     display: flex;
     flex-direction: row;
     flex-shrink: 0;
+    font-size: 13px;
 }
 
 
@@ -640,15 +643,14 @@ a {
 }
 
 .fc {
-    margin: 20px;
+    margin: 15px 1px;
     border: solid 1px;
-    padding: 15px 20px;
+    padding: 15px 16px;
     background: #212121;
     border-radius: 5px;
     color: white;
+    min-width: 33%;
 }
-
-
 
 #myChart {
   width: 100% !important;
