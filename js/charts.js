@@ -259,7 +259,7 @@ var chart = new Chart(ctx6, {
 
     // The data for our dataset
     data: {
-        labels: ['', '', '', '', ''],
+        labels: ['Customer Service', 'Appointment Setters', 'Sales', 'Tech Support', 'Management'],
         datasets: [{
             data: [21, 32, 40, 25, 29],
             backgroundColor: [
