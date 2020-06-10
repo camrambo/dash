@@ -102,6 +102,7 @@ $('.secondaryTheme').click(function() {
 //Show Stats Box
 $('.btnStats').click(function () {
     $('.graphWrap').toggleClass("active");
+    $('.statsHR').toggle();
 });
 
 
