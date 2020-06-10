@@ -30,10 +30,6 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
-    // Add a strikethrough on click
-    $('.goalBox li').click(function() {
-        $(this).toggleClass('checked');
-    });
   }
   document.getElementById("myInput").value = "";
 
@@ -55,5 +51,10 @@ function newElement() {
 
 // Add a strikethrough on click
 $('.goalBox li').click(function() {
-    $(this).toggleClass('checked');
+    if ($(this).hasClass('checked')) {
+      $(this).removeClass('checked');
+    } 
+    else {
+      $(this).addClass('checked');
+    }
 });
