@@ -186,7 +186,8 @@ var myChart3 = new Chart(ctx5, {
                     color: "rgba(0, 0, 0, 0)",
                 },
                 ticks: {
-                    suggestedMin: 10
+                    suggestedMin: 0,
+                    max: 50
                 },
                 display: false
             }],
