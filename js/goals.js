@@ -30,6 +30,10 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
+    // Add a strikethrough on click
+    $('.goalBox li').click(function() {
+        $(this).toggleClass('checked');
+    });
   }
   document.getElementById("myInput").value = "";
 
@@ -39,12 +43,7 @@ function newElement() {
   span.appendChild(txt);
   li.appendChild(span);
 
-  //START STRIKETHROUGH
-    function crossOut() {
-      li.classList.toggle("done");
-    }
-    li.addEventListener("click",crossOut);
-    //END STRIKETHROUGH
+
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
@@ -54,3 +53,7 @@ function newElement() {
   }
 }
 
+// Add a strikethrough on click
+$('.goalBox li').click(function() {
+    $(this).toggleClass('checked');
+});
