@@ -486,7 +486,7 @@ a {
     padding-left: 0px;
     display: flex;
     flex-direction: column;
-    margin: -15px 0 0 0;
+    margin: -10px 0 0 0;
 }
 
 .menuList a {
@@ -503,7 +503,7 @@ a {
 }
 
 .appSidebar li {
-    margin: 15px 0;
+    margin: 10px 0;
     font-size: 25px;
     display: flex;
 }
