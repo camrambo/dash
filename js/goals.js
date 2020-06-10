@@ -32,7 +32,13 @@ function newElement() {
     document.getElementById("myUL").appendChild(li);
     // Add a strikethrough on click
     $('.goalBox li').click(function() {
-        $(this).toggleClass('checked');
+        if ($(this).hasClass('checked')) {
+          $(this).removeClass('checked');
+        }
+        else {
+          $(this).addClass('checked');
+        }
+        
     });
   }
   document.getElementById("myInput").value = "";
