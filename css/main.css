@@ -466,14 +466,9 @@ a {
 
 .menuList {
   list-style: none;
-  padding-left: 15px;
+  padding-left: 0px;
   display: flex;
   flex-direction: column;
-}
-
-.menuList li {
-  font-size: 25px;
-  display: flex;
 }
 
 .menuList a {
@@ -489,7 +484,14 @@ a {
 }
 
 .appSidebar li {
-  margin: 25px 0;
+    margin: 25px 0;
+    font-size: 25px;
+    display: flex;
+}
+
+.appSidebar li:hover,
+.qMark:hover {
+    background: #575757;
 }
 
 .appSidebar h3 {
