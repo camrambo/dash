@@ -241,8 +241,8 @@ var ctx4 = document.getElementById('myChart4').getContext('2d');
                     },
                     display: false,
                     ticks: {
-                        suggestedMin: 3,
-                        max: 11
+                        suggestedMin: 100,
+                        max: 160
                     }
                 }]
             }
