@@ -1,1 +1,2 @@
-# fake dashboard site
+# dashboard
+demo dashboard
